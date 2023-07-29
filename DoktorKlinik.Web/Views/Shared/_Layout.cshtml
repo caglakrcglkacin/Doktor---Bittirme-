@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>   
+    <title>Admin</title>   
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="handheldfriendly" content="true">
+    <meta name="MobileOptimized" content="width">
+    <meta name="description" content="Mordenize">
+    <meta name="author" content="">
+    <meta name="keywords" content="Mordenize">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/png" href="/dist/images/logos/favicon.ico">   
+    <link rel="stylesheet" href="/dist/libs/owl.carousel/dist/assets/owl.carousel.min.css">    
+    <link id="themeColors" rel="stylesheet" href="/dist/css/style.min.css">
+</head>
+<body> 
+    <div class="preloader">
+        <img src="/Admin/dist/images/logos/favicon.ico" alt="loader" class="lds-ripple img-fluid">
+    </div>   
+    <div class="page-wrapper" id="main-wrapper" data-layout="horizontal" data-navbarbg="skin6" data-sidebartype="full" data-sidebar-position="fixed" data-header-position="fixed">     
+        <header class="app-header">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <ul class="navbar-nav">
+                    <li class="nav-item d-block d-lg-none">
+                        <a class="nav-link sidebartoggler ms-n3" id="sidebarCollapse" href="javascript:void(0)">
+                            <i class="ti ti-menu-2"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item d-none d-lg-block">
+                        <a href="index.html" class="text-nowrap nav-link">
+                            <img src="/dist/images/logos/dark-logo.svg" class="dark-logo" width="180" alt="">
+                            <img src="/dist/images/logos/light-logo.svg" class="light-logo" width="180" alt="">
+                        </a>
+                    </li>
+                    <li class="nav-item d-none d-lg-block">
+                        <a class="nav-link nav-icon-hover" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <i class="ti ti-search"></i>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav quick-links d-none d-lg-flex">
+                    <li class="nav-item dropdown hover-dd d-none d-lg-block">
+                        <a class="nav-link" href="javascript:void(0)" data-bs-toggle="dropdown">İşlemler<span class="mt-1"></span></a>
+                        <div class="dropdown-menu dropdown-menu-nav dropdown-menu-animate-up py-0">
+                            <div class="row">
+                                <div class="col-8">
+                                    <div class=" ps-7 pt-7">
+                                        <div class="border-bottom">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="position-relative">
+                                                        <a href="/Employee/EmployeeAdd" class="d-flex align-items-center pb-9 position-relative    ">
+                                                            <div class="bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
+                                                                <img src="/dist/images/svgs/icon-dd-chat.svg" alt="" class="img-fluid" width="24" height="24">
+                                                            </div>
+                                                            <div class="d-inline-block">
+                                                                <h6 class="mb-1 fw-semibold bg-hover-primary">Çalışan Girişi</h6>
+                                                                <span class="fs-2 d-block text-dark">Yeni Kişi Açılışı</span>
+                                                            </div>
+                                                        </a>
+                                                        <a href="/Employee/RoleAdd" class="d-flex align-items-center pb-9 position-relative    ">
+                                                            <div class="bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
+                                                                <img src="/dist/images/svgs/icon-dd-invoice.svg" alt="" class="img-fluid" width="24" height="24">
+                                                            </div>
+                                                            <div class="d-inline-block">
+                                                                <h6 class="mb-1 fw-semibold bg-hover-primary">Role</h6>
+                                                                <span class="fs-2 d-block text-dark">Role Ekle</span>
+                                                            </div>
+                                                        </a>
+                                                        <a href="/Employee/BolumAdd" class="d-flex align-items-center pb-9 position-relative    ">
+                                                            <div class="bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
+                                                                <img src="/dist/images/svgs/icon-dd-mobile.svg" alt="" class="img-fluid" width="24" height="24">
+                                                            </div>
+                                                            <div class="d-inline-block">
+                                                                <h6 class="mb-1 fw-semibold bg-hover-primary">Bölüm Ekle</h6>
+                                                                <span class="fs-2 d-block text-dark">Bölüm Ekle</span>
+                                                            </div>
+                                                        </a>
+                                                        <a href="/Employee/RandevuOlustur" class="d-flex align-items-center pb-9 position-relative    ">
+                                                            <div class="bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
+                                                                <img src="/dist/images/svgs/icon-dd-message-box.svg" alt="" class="img-fluid" width="24" height="24">
+                                                            </div>
+                                                            <div class="d-inline-block">
+                                                                <h6 class="mb-1 fw-semibold bg-hover-primary">Randevu Oluşturma</h6>
+                                                                <span class="fs-2 d-block text-dark">Randevu Oluştur</span>
+                                                            </div>
+                                                        </a>
+            
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                               
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav quick-links d-none d-lg-flex">
+                    <li class="nav-item dropdown hover-dd d-none d-lg-block">
+                        <a class="nav-link" href="/Home/LogOut">Çıkış<span class="mt-1"></span></a>
+                        
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <aside class="left-sidebar">
+            <div class="fixed-profile p-3 bg-light-secondary rounded sidebar-ad mt-3 mx-9 d-block d-lg-none">
+                <div class="hstack gap-3 justify-content-between">
+                    <div class="john-img">
+                        <img src="/dist/images/profile/user-1.jpg" class="rounded-circle" width="42" height="42" alt="">
+                    </div>
+                    <div class="john-title">
+                        <h6 class="mb-0 fs-4">Admin</h6>
+                        <span class="fs-2">Hoşgeldiniz</span>
+                    </div>
+                    <button class="border-0 bg-transparent text-primary ms-2" tabindex="0" type="button" aria-label="logout" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="logout">
+                        <i class="ti ti-power fs-6"></i>
+                    </button>
+                </div>
+            </div>
+        </aside>
+        <div class="body-wrapper">
+            @RenderBody()
+            <div class="container-fluid">
+                <!--  Owl carousel -->
+             @*   <div class="owl-carousel counter-carousel owl-theme">
+                    <div class="item">
+                        <div class="card border-0 zoom-in bg-light-primary shadow-none">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <img src="/dist/images/svgs/icon-user-male.svg" width="50" height="50" class="mb-3" alt="">
+                                    <p class="fw-semibold fs-3 text-primary mb-1"> Employees </p>
+                                    <h5 class="fw-semibold text-primary mb-0">96</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card border-0 zoom-in bg-light-warning shadow-none">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <img src="/dist/images/svgs/icon-briefcase.svg" width="50" height="50" class="mb-3" alt="">
+                                    <p class="fw-semibold fs-3 text-warning mb-1">Clients</p>
+                                    <h5 class="fw-semibold text-warning mb-0">3,650</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card border-0 zoom-in bg-light-info shadow-none">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <img src="/dist/images/svgs/icon-mailbox.svg" width="50" height="50" class="mb-3" alt="">
+                                    <p class="fw-semibold fs-3 text-info mb-1">Projects</p>
+                                    <h5 class="fw-semibold text-info mb-0">356</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card border-0 zoom-in bg-light-danger shadow-none">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <img src="../../dist/images/svgs/icon-favorites.svg" width="50" height="50" class="mb-3" alt="">
+                                    <p class="fw-semibold fs-3 text-danger mb-1">Events</p>
+                                    <h5 class="fw-semibold text-danger mb-0">696</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card border-0 zoom-in bg-light-success shadow-none">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <img src="/dist/images/svgs/icon-speech-bubble.svg" width="50" height="50" class="mb-3" alt="">
+                                    <p class="fw-semibold fs-3 text-success mb-1">Payroll</p>
+                                    <h5 class="fw-semibold text-success mb-0">$96k</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card border-0 zoom-in bg-light-info shadow-none">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <img src="/dist/images/svgs/icon-connect.svg" width="50" height="50" class="mb-3" alt="">
+                                    <p class="fw-semibold fs-3 text-info mb-1">Reports</p>
+                                    <h5 class="fw-semibold text-info mb-0">59</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>*@
+              
+            </div>
+        </div>
+    </div>
+   
+    <script src="/dist/libs/jquery/dist/jquery.min.js"></script>
+    <script src="/dist/libs/simplebar/dist/simplebar.min.js"></script>
+    <script src="/dist/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>  
+    <script src="/dist/js/app.min.js"></script>
+    <script src="/dist/js/app.horizontal.init.js"></script>
+    <script src="/dist/js/app-style-switcher.js"></script>
+    <script src="/dist/js/sidebarmenu.js"></script>
+    <script src="/dist/js/custom.js"></script>
+    <script src="/dist/libs/owl.carousel/dist/owl.carousel.min.js"></script>
+    <script src="/dist/libs/apexcharts/dist/apexcharts.min.js"></script>
+    <script src="/dist/js/dashboard.js"></script>
+     @RenderSection("Scripts",false)
+</body>
+</html>

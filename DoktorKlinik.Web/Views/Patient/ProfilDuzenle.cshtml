@@ -1,0 +1,61 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutHastaAdmin.cshtml";
+}
+
+@model UserSummary
+<section class="content">
+    <div class="row">
+        <!-- Form controls -->
+        <div class="col-sm-12">
+            <div class="panel panel-bd lobidrag">
+                <div class="panel-heading">
+                    <div class="btn-group">
+                        <a class="btn btn-primary" href="pt-list.html">
+                            <i class="fa fa-list"></i>  patient List
+                        </a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <form class="col-sm-6" action="/Patient/ProfilDuzenle" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label>Adınız</label>
+                            <input type="text" class="form-control" placeholder="Enter First Name" value="@Model.Name" readonly>
+                            <input type="hidden" class="form-control" value="@Model.Id" asp-for="Id" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Soyadınız</label>
+                            <input type="text" class="form-control" placeholder="Enter First Name" value="@Model.Surname" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>Kullanıcı Adı</label>
+                            <input type="text" class="form-control" placeholder="Enter last Name" value="@Model.UserName" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>Telefon</label>
+                            <input type="number" class="form-control" placeholder="Enter Mobile" value="@Model.Phone" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Picture upload</label>
+                            <input type="file" name="ProfileImage" id="ProfileImage">
+                            @*<input type="hidden"  name="ProfileImage">*@
+                        </div>
+
+                        <div class="form-group">
+                            <label>Date of Birth</label>
+                            <input name="date_of_birth" class="datepicker form-control hasDatepicker" type="text" value="@Model.BirthDate" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>Kimlik</label>
+                            <input class="datepicker form-control hasDatepicker" type="text" value="@Model.IdentityNumber" readonly>
+                        </div>
+                        <div class="reset-button">
+                            <button class="btn">Kaydet</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

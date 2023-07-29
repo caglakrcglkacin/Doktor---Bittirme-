@@ -1,0 +1,103 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutHastaAdmin.cshtml";
+}
+@model AppointmentGetDto
+
+<section class="content">
+    <div class="row">
+        <div class="col-10">
+            <div class="card">
+                <form action="/Patient/BolumRandevu" method="post">
+                    <div class="card-body p-4 border-bottom">
+                        <div class="panel panel-bd lobidrag">
+                            <div class="panel panel-bd lobidrag">
+                                <div class="panel-title">
+                                    <h4>Bölüm Seçme </h4>
+                                </div>
+                                <div class="col-sm-12">
+                                    <select class="form-select" asp-items="(SelectList)ViewBag.Doctor" asp-for="DoctorId" id="Part_Sec" aria-label="Default select example">
+                                        <option>.:: Lütfen Seçiniz ::.</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-bd lobidrag">
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    <h4>Randevu Tablosu </h4>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table id="dataTableExample2" class="table table-bordered table-striped table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Doktor Adı</th>
+                                                <th>Bölüm</th>
+                                                <th>Tarih</th>
+                                                <th>Saat</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="DoctorId">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <input type="hidden" id="AppointmentId" name="appointmentId" value="">
+                            <input type="hidden" asp-for="UserId" value="@ViewBag.Kisi">
+                            <div class="col-sm-9">
+                                <div class="d-flex align-items-center gap-3">
+                                    <button class="btn btn-primary">Kaydet</button>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+@section Scripts{
+    <script>
+
+        let bolum = document.querySelector('#Part_Sec');
+
+        function myChangeHandler() {
+            $.ajax({
+                url: `/Patient/DoktorRandevuGetir?DoktorId=${this.value}`,
+                method: 'get',
+                success: function (doctor) {
+                    var table = "";
+                    for (var i = 0; i < doctor.length; i++) {
+                        table += "<tr>";
+                        table += "<td> <input type=checkbox class=form-check-input id=checkId value=" + doctor[i].id + " /></td>";
+                        table += "<td>" + doctor[i].doctorName + "</td>";
+                        table += "<td>" + doctor[i].bolum + "</td>";
+                        table += "<td>" + doctor[i].dateOnly + "</td>";
+                        table += "<td>" + doctor[i].timeOnly + "</td>";
+                        table += "</tr>";
+                    }
+
+                    document.getElementById('DoctorId').innerHTML = table;
+                }
+            });
+        }
+        bolum.addEventListener('change', myChangeHandler);// Eğer bunu en başa yazarsak eventi hep çalıstırır ve diğer scripler çalışmar.
+
+        $(document).ready(function () {
+          
+            $(document).on('click', '#checkId', function () {
+                if ($(this).is(':checked')) {
+                    document.getElementById('AppointmentId').value = $(this).val();
+                   
+                }
+            });
+        });
+
+    </script>
+
+}

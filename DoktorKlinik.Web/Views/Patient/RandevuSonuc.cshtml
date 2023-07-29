@@ -1,0 +1,44 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutHastaAdmin.cshtml";
+}
+@model List<AppointmentSummray>
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12">
+        <div class="panel panel-bd lobidrag">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    <h4>Randevu Tablosu </h4>
+                </div>
+            </div>
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table id="dataTableExample2" class="table table-bordered table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Doktor Adı</th>
+                                <th>Bölüm</th>
+                                <th>Tarih</th>
+                                <th>Saat</th>
+                            </tr>
+                        </thead>
+                        @foreach (var item in Model)
+                        {
+                            <tbody>
+                                <tr>
+                                    <td>@item.Id</td>
+                                    <td>@item.DoctorName</td>
+                                    <td>@item.Bolum</td>
+                                    <td>@item.DateOnly</td>
+                                    <td>@item.TimeOnly</td>
+                                </tr>
+                            </tbody>
+                        }
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

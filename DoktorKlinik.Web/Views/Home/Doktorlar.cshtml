@@ -1,0 +1,50 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutWeb.cshtml";
+}
+
+@model List<DoctorSummary>
+
+<div class="page-ttl">
+        <div class="layer-stretch">
+            <div class="page-ttl-container">
+                <h1>Doctors</h1>
+                <p><a href="#">Home</a> &#8594; <span>Doctors</span></p>
+            </div>
+        </div>
+    </div><!-- End Page Title Section -->
+    <!-- Start Doctor List Section -->
+    <div id="doctor-page" class="layer-stretch">
+        <div class="layer-wrapper text-center">
+            <div class="row">
+                @foreach(var item in Model)
+                {
+                <div class="col-md-6 col-lg-4">
+                    <div class="theme-block theme-block-hover">
+                        <div class="theme-block-picture">
+                            <img src="@item.ProfilPhoto" alt="">
+                        </div>
+                        <div class="doctor-name">
+                            <h4><a>@item.FullName</a></h4>
+                        </div>
+                        <div class="doctor-details">
+                            <div class="doctor-specility">
+                                <p>@item.BolumAdi</p>
+                            </div>
+                            <div class="doctor-details-extra">
+                             @*   <p><i class="fa fa-shield"></i></p>
+                                <p><i class="fa fa-mortar-board"></i>MBBS, MD</p>
+                                <p><i class="fa fa-trophy"></i>Awards: 8</p>
+                                <p><i class="fa fa-star"></i>Experience: 17 year</p>*@
+                            </div>
+                        </div>
+                     
+                    </div>
+                </div>
+
+                }
+            </div>
+       
+        </div>
+    </div><!-- End Doctor List Section -->
+
+   

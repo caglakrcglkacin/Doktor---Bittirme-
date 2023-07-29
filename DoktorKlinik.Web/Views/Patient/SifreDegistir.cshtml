@@ -1,0 +1,42 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutHastaAdmin.cshtml";
+}
+
+@model UserSummary
+<section class="content">
+    <div class="row">
+        <!-- Form controls -->
+        <div class="col-sm-12">
+            <div class="panel panel-bd lobidrag">
+                <div class="panel-heading">
+                    <div class="btn-group">
+                        <a class="btn btn-primary" href="pt-list.html">
+                            <i class="fa fa-list"></i>  patient List
+                        </a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <form class="col-sm-6" action="/Patient/SifreDegistir" method="post">
+                        <input type="hidden" class="form-control" value="@Model.Id" asp-for="Id" required>
+                        <div class="form-group">
+                            <label>Eski Parola</label>
+                            <input class="datepicker form-control hasDatepicker" type="password" asp-for="OldPassword">
+                        </div>
+                        <div class="form-group">
+                            <label>Yeni Parola</label>
+                            <input class="datepicker form-control hasDatepicker" type="password" asp-for="NewPassword">
+                        </div>
+                        <div class="form-group">
+                            <label>Parolayı Tekrarla</label>
+                            <input class="datepicker form-control hasDatepicker" type="password" asp-for="NewPasswordAgin">
+                        </div>
+                        <div class="reset-button">
+                            <button class="btn">Kaydet</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

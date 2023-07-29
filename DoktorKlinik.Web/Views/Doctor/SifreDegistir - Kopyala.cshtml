@@ -1,0 +1,33 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutDoctorAdmin.cshtml";
+}
+
+@model UserSummary
+<section class="content">
+    <div class="row">
+        <!-- Form controls -->
+        <div class="col-sm-12">
+            <div class="panel panel-bd lobidrag">
+                <div class="panel-heading">
+                    <div class="btn-group">
+                        <a class="btn btn-primary" href="pt-list.html">
+                            <i class="fa fa-list"></i>  patient List
+                        </a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <form class="col-sm-6" action="/Doctor/SifreDegistir" method="post">
+                        <div class="form-group">
+                            <label>Kullanici Adı</label>
+                            <input class="datepicker form-control hasDatepicker" type="password" asp-for="UserName">
+                        </div>
+                        <div class="reset-button">
+                            <button class="btn">Kaydet</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

@@ -1,0 +1,77 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutDoctorAdmin.cshtml";
+}
+@model DoctorSummary
+   
+    <section class="content-header">
+        <div class="header-icon"><i class="pe-7s-user-female"></i></div>
+        <div class="header-title">
+            <h1>Profile</h1>
+            <small>Show user data in clear profile design</small>
+            <ol class="breadcrumb hidden-xs">
+                <li><a href="index.html"><i class="pe-7s-home"></i>Home</a></li>
+                <li><a href="#">UI Elements</a></li>
+                <li class="active">Profile</li>
+            </ol>
+        </div>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                    <div class="review-block-img">
+                        <img src="@Model.ProfilPhoto" class="img-rounded" alt="">
+                    </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-content-member">
+                            <h4 class="m-t-0">@Model.FullName</h4>
+                            <p class="m-0"><i class="pe-7s-map-marker"></i>@Model.BolumAdi</p>
+                        </div>
+                        <div class="card-content-languages">
+                            <div class="card-content-languages-group">
+                                <div>
+                                    <h4>Doğum Tarihi</h4>
+                                </div>
+                                <div>
+                                    <ul>
+                                        <li>@Model.BirthDate</li>
+                                     
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content-summary">
+                            <p></p>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-8">                
+                <div class="review-block">
+                    @foreach(var item in ViewBag.Yorumlas)
+
+                {
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="review-block-img">
+                                <img src="@item.Photo" class="img-rounded" alt="">
+                            </div>
+                            <div class="review-block-name"><a href="#">@item.PatientFulName</a></div>
+                            <div class="review-block-date">@item.RandevuTarihVeSaat<br /></div>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="review-block-title">@item.DoktorName</div>
+                            <div class="review-block-description">@item.Comment </div>
+                        </div>
+                    </div>
+                    <hr />
+                }
+                  
+                </div>
+            </div>
+        </div>
+    </section>
+

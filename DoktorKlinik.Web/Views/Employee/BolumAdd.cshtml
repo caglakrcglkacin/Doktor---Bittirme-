@@ -1,0 +1,21 @@
+﻿@model PartDto
+
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="px-4 py-3 border-bottom">
+                <h5 class="card-title fw-semibold mb-0">Form Separator</h5>
+            </div>
+            <form action="/Employee/BolumAdd" method="post">
+                <div class="mb-4">
+                    <label for="exampleInputPassword1" class="form-label fw-semibold">Bölüm İsmi</label>
+                    <input type="text" class="form-control" asp-for="Name">
+                </div>
+                <div>
+                    <button class="form-control btn btn-dark-light" type="submit">Kaydet</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
