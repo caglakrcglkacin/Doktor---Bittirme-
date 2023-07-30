@@ -34,8 +34,8 @@ builder.Services.AddDbContext<TourContext>(p =>
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
       .AddCookie();
-builder.Services.AddScoped<ICountryService, CountryService>();
-builder.Services.AddScoped<ICityService, CityService>();
+
+
 builder.Services.AddScoped<IUserServices, UserService>();
 builder.Services.AddScoped<IRoleService, RoleService>();
 builder.Services.AddScoped<IPatientService, PatientService>();

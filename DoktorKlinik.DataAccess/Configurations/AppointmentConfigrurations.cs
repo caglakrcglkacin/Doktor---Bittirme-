@@ -1,4 +1,4 @@
-﻿using DoktorKlinik.Domain.Country;
+﻿
 using DoktorKlinik.Domain.Randevu;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;

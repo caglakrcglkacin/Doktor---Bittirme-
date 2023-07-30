@@ -1,7 +1,6 @@
 ﻿using DoktorKlinik.Business.Interface_Service;
 using DoktorKlinik.Business.Service_Base;
 using DoktorKlinik.DataAccess;
-using DoktorKlinik.Domain.Country;
 using DoktorKlinik.Domain.User;
 using DoktorKlinik.Dto;
 using DoktorKlinik.Summary;

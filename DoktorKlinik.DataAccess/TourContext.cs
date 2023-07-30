@@ -1,7 +1,7 @@
 ﻿using DoktorKlinik.DataAccess.Configurations;
 using DoktorKlinik.DataAccess.Setting;
 using DoktorKlinik.Domain.Bölüm;
-using DoktorKlinik.Domain.Country;
+
 using DoktorKlinik.Domain.Randevu;
 using DoktorKlinik.Domain.User;
 using DoktorKlinik.Domain.Yorum;
@@ -26,8 +26,7 @@ namespace DoktorKlinik.DataAccess
         {
 
         }
-        public DbSet<City> Cities { get; set; }
-        public DbSet<Country> Countries { get; set; }
+   
         public DbSet<Appointment> Appointments { get; set; }
         public DbSet<AppointmentGet> AppointmentGets { get; set; }
         public DbSet<Part> Parts { get; set; }
@@ -42,8 +41,7 @@ namespace DoktorKlinik.DataAccess
         
             base.OnModelCreating(modelBuilder);//ıdenty kullanırken bu metodu kullanmak istiyorsak bunu kullanmamız gerekmektedir.
 
-            modelBuilder.ApplyConfiguration(new CityConfigrurations());
-            modelBuilder.ApplyConfiguration(new CountryConfigrurations());
+         
             modelBuilder.ApplyConfiguration(new AppointmentConfigrurations());
             modelBuilder.ApplyConfiguration(new AppointmentGetiConfigrurations());
             modelBuilder.ApplyConfiguration(new PatientInfoConfigrurations());
